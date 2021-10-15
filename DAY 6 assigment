@@ -1,0 +1,16 @@
+class TempConv(Exception):
+    pass
+def Checktemp():
+    tk=int(input("Enter temprature in Kelvin"))
+    tf=(tk-273)*9/5+32
+    if tk==0:
+        raise TempConv("as cold as its get")
+    elif tf<0:
+        raise TempConv("This temprature is moving to feeling cold")
+    print(tf)
+try:
+    Checktemp()
+except ValueError as t:
+    print(t)
+except TempConv as tc:
+    print(tc)
