@@ -1,0 +1,18 @@
+class Person:
+    
+    def __init__(self,name,empid):
+        self.name=name
+        self.empid=empid
+    def working(self):
+        print("I am an employee")
+class employee(Person):
+    
+    def status(self,designation,salary):
+        self.designation=designation
+        self.salary=salary
+        print("He got good salary to his degination")
+    
+    
+a1=employee("Nelson",110)
+a1.working()
+a1.status("Finance",25000)
